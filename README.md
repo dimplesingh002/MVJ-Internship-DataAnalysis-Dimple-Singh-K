@@ -1,6 +1,3 @@
-# MVJ-Internship-DataAnalysis-Dimple-Singh-K
-MVJ BCA Data Science Internship - Data Analysis Track
-
 # MVJ BCA (Data Science) Internship - Data Analysis Track
 
 * **Student Name:** [Dimple Singh K]
