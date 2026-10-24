@@ -41,3 +41,25 @@ mvj-internship-data-analytics-<your-name>/
 ├── project3/                # Project 3: Predictive Model & Power BI KPI Dashboard
 ├── capstone/                # End-to-End Capstone Project
 └── report/                  # Internship Report (BNU DS5P3 Syllabus Format)
+Project,Focus / Topic,Dataset Used,Primary Deliverables,Status
+Project 1,"KPI Analysis (Revenue, AOV, MoM Growth)",Online Retail II (UCI),"queries.sql, Excel KPI Pack, 5 Business Recommendations",In Progress
+Project 2,Customer Segmentation & Retention,Online Retail II / Maven Dataset,"Python Notebook (RFM, Cohort Matrix), Retention Plan",Upcoming
+Project 3,Churn Prediction & Power BI Dashboard,Bank Customer Churn (Maven) / Bengaluru Data,"Predictive Model Notebook, .pbix Dashboard, Tableau Link",Upcoming
+Capstone,To be selected on Day 25 (10 Nov),TBD,"Charter, Data Pipeline, Dashboard, Story Deck, Final Viva",Upcoming
+⏱️ Daily Effort & Timesheet
+Planned Hours: 112 Hours (4 hrs Mon–Sat, 2 hrs Sun)
+
+Required Minimum: 90 Hours
+
+Tracking: All daily activities, learnings, and AI usage logs are maintained in timesheet/<your-name>.xlsx.
+
+🤖 Responsible AI Usage Policy
+AI assistants (Gemini, ChatGPT, Claude) are used to assist with syntax debugging, code optimization, and concept verification following the course guidelines:
+
+Try first, ask second: Queries and code are written independently prior to AI review.
+
+Strict Verification: All numerical outputs, SQL aggregations, and metrics are cross-verified in Excel/pandas.
+
+Data Privacy: Only public datasets are used; no proprietary or confidential data is shared.
+
+Transparency: AI interactions and query assistance are logged in the daily timesheet.
