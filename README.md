@@ -8,16 +8,16 @@
 ---
 
 ## 👤 Student Information
-* **Name:** <Dimple Singh K>
-* **Register Number:** <U19XF24S0021>
+* **Name:** Dimple Singh K
+* **Register Number:** U19XF24S0021
 * **Track:** Data Analytics
-* **GitHub Repository:** [https://github.com/dimplesingh002/MVJ-Internship-DataAnalysis-Dimple-Singh-K]
+* **GitHub Repository:** [https://github.com/dimplesingh002/MVJ-Internship-DataAnalysis-Dimple-Singh-K](https://github.com/dimplesingh002/MVJ-Internship-DataAnalysis-Dimple-Singh-K)
 * **Mentor:** Ajay Balamurugadas
 
 ---
 
 ## 🎯 Track Overview & Objectives
-This repository contains all daily work, project code, reports, and evidence for the **Data Analytics Track**. The primary objective is to solve core business problems through data-driven approaches, designed around the key business question progression:  
+This repository contains all daily work, project code, reports, and evidence for the **Data Analytics Track**. The primary objective is to solve core business questions through data-driven approaches:  
 *What happened? → Why did it happen? → What will happen next? → What should we do about it?*
 
 ### Key Technical Competencies:
@@ -31,43 +31,59 @@ This repository contains all daily work, project code, reports, and evidence for
 ## 📁 Repository Structure
 
 ```text
-mvj-internship-data-analytics-<your-name>/
+MVJ-Internship-DataAnalysis-Dimple-Singh-K/
 │
 ├── README.md                # Main repository documentation & project index
 ├── timesheet/
-│   └── <your-name>.xlsx     # Daily logged hours, tasks, AI usage, and commit references
+│   └── Dimple_Singh_K.xlsx  # Daily logged hours, tasks, AI usage, and commit references
 ├── project1/                # Project 1: KPI Analysis with SQL + Excel
 ├── project2/                # Project 2: Customer Segmentation & Retention (RFM & Cohorts)
 ├── project3/                # Project 3: Predictive Model & Power BI KPI Dashboard
 ├── capstone/                # End-to-End Capstone Project
 └── report/                  # Internship Report (BNU DS5P3 Syllabus Format)
+```
+
+---
 
 ## 📊 Project Summary Index
 
-| Project | Focus / Topic | Dataset Used | Primary Deliverables | Status |
-| :--- | :--- | :--- | :--- | :--- |
-| **Project 1** | KPI Analysis (Revenue, AOV, MoM Growth) | Online Retail II (UCI) | `queries.sql`, Excel KPI Pack, 5 Business Recommendations | In Progress |
-| **Project 2** | Customer Segmentation & Retention | Online Retail II / Maven Dataset | Python Notebook (RFM, Cohort Matrix), Retention Plan | Upcoming |
-| **Project 3** | Churn Prediction & Power BI Dashboard | Bank Customer Churn (Maven) / Bengaluru Data | Predictive Model Notebook, `.pbix` Dashboard, Tableau Link | Upcoming |
-| **Capstone** | To be selected on Day 25 (10 Nov) | TBD | Charter, Data Pipeline, Dashboard, Story Deck, Final Viva | Upcoming |
+* **Project 1:** KPI Analysis (Revenue, AOV, MoM Growth)
+  * **Dataset Used:** Online Retail II (UCI)
+  * **Primary Deliverables:** `queries.sql`, Excel KPI Pack, 5 Business Recommendations
+  * **Status:** In Progress
+
+* **Project 2:** Customer Segmentation & Retention
+  * **Dataset Used:** Online Retail II / Maven Dataset
+  * **Primary Deliverables:** Python Notebook (RFM, Cohort Matrix), Retention Plan
+  * **Status:** Upcoming
+
+* **Project 3:** Churn Prediction & Power BI Dashboard
+  * **Dataset Used:** Bank Customer Churn (Maven) / Bengaluru Data
+  * **Primary Deliverables:** Predictive Model Notebook, `.pbix` Dashboard, Tableau Link
+  * **Status:** Upcoming
+
+* **Project Capstone:** To be selected on Day 25 (10 Nov)
+  * **Dataset Used:** TBD
+  * **Primary Deliverables:** Charter, Data Pipeline, Dashboard, Story Deck, Final Viva
+  * **Status:** Upcoming
+
+---
 
 ## ⏱️ Daily Effort & Timesheet
 
-| Metric | Target / Requirement | Status / Location |
-| :--- | :--- | :--- |
-| **Planned Effort** | 112 Total Hours (4 hrs Mon–Sat, 2 hrs Sun) | Tracked daily in timesheet |
-| **Minimum Required** | 90 Total Hours | Mandatory for evaluation |
-| **Timesheet Location** | [`timesheet/<your-name>.xlsx`](./timesheet/) | Updated daily before logging off |
+* **Planned Effort:** 112 Total Hours (4 hrs Mon–Sat, 2 hrs Sun)
+* **Minimum Required:** 90 Total Hours
+* **Timesheet Location:** [`timesheet/Dimple_Singh_K.xlsx`](./timesheet/)
+* **Daily Tracking:** All daily activities, learnings, and AI usage logs are updated before logging off.
+
+---
 
 ## 🤖 Responsible AI Usage Policy
 
 AI assistants (Gemini, ChatGPT, Claude) are used to support syntax debugging, query optimization, and concept verification following the course integrity guidelines:
 
-| Rule | Policy | Action Taken |
-| :---: | :--- | :--- |
-| **1** | **Try First, Ask Second** | Write initial queries and scripts independently before consulting AI. |
-| **2** | **Strict Verification** | Cross-verify all numerical calculations, SQL totals, and metrics in Excel/pandas. |
-| **3** | **Data Privacy** | Use public datasets exclusively; no confidential data is ever uploaded. |
-| **4** | **Full Transparency** | Log all AI tools used and exact prompts/assistance in the daily timesheet. |
-| **5** | **Ownership** | Understand and explain every line of code and visual deliverable during viva. |
-
+* **1. Try First, Ask Second:** Write initial queries and scripts independently before consulting AI.
+* **2. Strict Verification:** Cross-verify all numerical calculations, SQL totals, and metrics in Excel/pandas.
+* **3. Data Privacy:** Use public datasets exclusively; no confidential data is ever uploaded.
+* **4. Full Transparency:** Log all AI tools used and exact prompts/assistance in the daily timesheet.
+* **5. Ownership:** Understand and explain every line of code and visual deliverable during viva.
