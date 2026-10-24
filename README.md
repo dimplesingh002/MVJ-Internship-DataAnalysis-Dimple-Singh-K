@@ -41,25 +41,33 @@ mvj-internship-data-analytics-<your-name>/
 ├── project3/                # Project 3: Predictive Model & Power BI KPI Dashboard
 ├── capstone/                # End-to-End Capstone Project
 └── report/                  # Internship Report (BNU DS5P3 Syllabus Format)
-Project,Focus / Topic,Dataset Used,Primary Deliverables,Status
-Project 1,"KPI Analysis (Revenue, AOV, MoM Growth)",Online Retail II (UCI),"queries.sql, Excel KPI Pack, 5 Business Recommendations",In Progress
-Project 2,Customer Segmentation & Retention,Online Retail II / Maven Dataset,"Python Notebook (RFM, Cohort Matrix), Retention Plan",Upcoming
-Project 3,Churn Prediction & Power BI Dashboard,Bank Customer Churn (Maven) / Bengaluru Data,"Predictive Model Notebook, .pbix Dashboard, Tableau Link",Upcoming
-Capstone,To be selected on Day 25 (10 Nov),TBD,"Charter, Data Pipeline, Dashboard, Story Deck, Final Viva",Upcoming
-⏱️ Daily Effort & Timesheet
-Planned Hours: 112 Hours (4 hrs Mon–Sat, 2 hrs Sun)
 
-Required Minimum: 90 Hours
+## 📊 Project Summary Index
 
-Tracking: All daily activities, learnings, and AI usage logs are maintained in timesheet/<your-name>.xlsx.
+| Project | Focus / Topic | Dataset Used | Primary Deliverables | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Project 1** | KPI Analysis (Revenue, AOV, MoM Growth) | Online Retail II (UCI) | `queries.sql`, Excel KPI Pack, 5 Business Recommendations | In Progress |
+| **Project 2** | Customer Segmentation & Retention | Online Retail II / Maven Dataset | Python Notebook (RFM, Cohort Matrix), Retention Plan | Upcoming |
+| **Project 3** | Churn Prediction & Power BI Dashboard | Bank Customer Churn (Maven) / Bengaluru Data | Predictive Model Notebook, `.pbix` Dashboard, Tableau Link | Upcoming |
+| **Capstone** | To be selected on Day 25 (10 Nov) | TBD | Charter, Data Pipeline, Dashboard, Story Deck, Final Viva | Upcoming |
 
-🤖 Responsible AI Usage Policy
-AI assistants (Gemini, ChatGPT, Claude) are used to assist with syntax debugging, code optimization, and concept verification following the course guidelines:
+## ⏱️ Daily Effort & Timesheet
 
-Try first, ask second: Queries and code are written independently prior to AI review.
+| Metric | Target / Requirement | Status / Location |
+| :--- | :--- | :--- |
+| **Planned Effort** | 112 Total Hours (4 hrs Mon–Sat, 2 hrs Sun) | Tracked daily in timesheet |
+| **Minimum Required** | 90 Total Hours | Mandatory for evaluation |
+| **Timesheet Location** | [`timesheet/<your-name>.xlsx`](./timesheet/) | Updated daily before logging off |
 
-Strict Verification: All numerical outputs, SQL aggregations, and metrics are cross-verified in Excel/pandas.
+## 🤖 Responsible AI Usage Policy
 
-Data Privacy: Only public datasets are used; no proprietary or confidential data is shared.
+AI assistants (Gemini, ChatGPT, Claude) are used to support syntax debugging, query optimization, and concept verification following the course integrity guidelines:
 
-Transparency: AI interactions and query assistance are logged in the daily timesheet.
+| Rule | Policy | Action Taken |
+| :---: | :--- | :--- |
+| **1** | **Try First, Ask Second** | Write initial queries and scripts independently before consulting AI. |
+| **2** | **Strict Verification** | Cross-verify all numerical calculations, SQL totals, and metrics in Excel/pandas. |
+| **3** | **Data Privacy** | Use public datasets exclusively; no confidential data is ever uploaded. |
+| **4** | **Full Transparency** | Log all AI tools used and exact prompts/assistance in the daily timesheet. |
+| **5** | **Ownership** | Understand and explain every line of code and visual deliverable during viva. |
+
