@@ -25,3 +25,44 @@ FROM online_retail
 WHERE Quantity > 0 AND Price > 0
 GROUP BY Month
 ORDER BY Month ASC;
+
+-- ============================================================
+-- Day 6: Query 1 - Daily Revenue & Running Total
+-- ============================================================
+WITH DailySales AS (
+    SELECT 
+        SUBSTR(InvoiceDate, 1, 10) AS SaleDate,
+        SUM(Quantity * Price) AS DailyRevenue
+    FROM online_retail
+    WHERE Quantity > 0 AND Price > 0
+    GROUP BY SaleDate
+)
+SELECT 
+    SaleDate,
+    ROUND(DailyRevenue, 2) AS DailyRevenue,
+    ROUND(SUM(DailyRevenue) OVER (ORDER BY SaleDate), 2) AS RunningTotalRevenue
+FROM DailySales
+ORDER BY SaleDate;
+
+
+-- ============================================================
+-- Day 6: Query 2 - Customer Spending Rank using Window Functions
+-- ============================================================
+WITH CustomerSpending AS (
+    SELECT 
+        "Customer ID" AS CustomerID,
+        Country,
+        SUM(Quantity * Price) AS TotalSpent,
+        COUNT(DISTINCT Invoice) AS TotalOrders
+    FROM online_retail
+    WHERE "Customer ID" IS NOT NULL AND Quantity > 0 AND Price > 0
+    GROUP BY "Customer ID", Country
+)
+SELECT 
+    CustomerID,
+    Country,
+    ROUND(TotalSpent, 2) AS TotalSpent,
+    TotalOrders,
+    RANK() OVER (ORDER BY TotalSpent DESC) AS SpendingRank
+FROM CustomerSpending
+LIMIT 20;
