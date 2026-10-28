@@ -66,3 +66,58 @@ SELECT
     RANK() OVER (ORDER BY TotalSpent DESC) AS SpendingRank
 FROM CustomerSpending
 LIMIT 20;
+
+
+-- Project 1: Online Retail KPI Analysis Queries
+-- Database: online_retail.db
+-- Day 8:Queries
+-- 1. Total Revenue
+SELECT 
+    ROUND(SUM(Quantity * Price), 2) AS Total_Revenue
+FROM online_retail;
+
+-- 2. Average Order Value (AOV)
+SELECT 
+    ROUND(SUM(Quantity * Price) / COUNT(DISTINCT Invoice), 2) AS Average_Order_Value
+FROM online_retail;
+
+-- 3. Top 10 Products by Revenue
+SELECT 
+    Description,
+    SUM(Quantity) AS Total_Quantity_Sold,
+    ROUND(SUM(Quantity * Price), 2) AS Total_Revenue
+FROM online_retail
+WHERE Description IS NOT NULL
+GROUP BY Description
+ORDER BY Total_Revenue DESC
+LIMIT 10;
+
+-- 4. Month-over-Month (MoM) Revenue Growth Trends
+WITH MonthlyRevenue AS (
+    SELECT 
+        STRFTIME('%Y-%m', InvoiceDate) AS Month,
+        ROUND(SUM(Quantity * Price), 2) AS Monthly_Revenue
+    FROM online_retail
+    WHERE InvoiceDate IS NOT NULL
+    GROUP BY Month
+)
+SELECT 
+    Month,
+    Monthly_Revenue,
+    LAG(Monthly_Revenue, 1) OVER (ORDER BY Month) AS Previous_Month_Revenue,
+    ROUND(
+        ((Monthly_Revenue - LAG(Monthly_Revenue, 1) OVER (ORDER BY Month)) / 
+        LAG(Monthly_Revenue, 1) OVER (ORDER BY Month)) * 100, 2
+    ) AS MoM_Growth_Percentage
+FROM MonthlyRevenue;
+
+-- 5. Repeat Customer Analysis
+SELECT 
+    `Customer ID`,
+    COUNT(DISTINCT Invoice) AS Total_Orders,
+    ROUND(SUM(Quantity * Price), 2) AS Total_Customer_Spend
+FROM online_retail
+WHERE `Customer ID` IS NOT NULL
+GROUP BY `Customer ID`
+HAVING Total_Orders > 1
+ORDER BY Total_Customer_Spend DESC;
