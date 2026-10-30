@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import sqlite3
 import pandas as pd
 
+=======
+<<<<<<< HEAD
+
+=======
+import sqlite3
+import pandas as pd
+
+>>>>>>> 3ee80a8 (Day 10: Final commit consolidating pandas KPI script)
 # 1. Connect to SQLite database and load data into a DataFrame
 conn = sqlite3.connect('../online_retail.db')  # Adjust path if db is in root
 query = "SELECT Invoice, StockCode, Description, Quantity, InvoiceDate, Price, `Customer ID` FROM online_retail"
@@ -27,4 +36,9 @@ print(f"Average Order Value (AOV): ₹{aov:,.2f}")
 top_products = df_clean.groupby('Description')['Revenue'].sum().reset_index()
 top_products = top_products.sort_values(by='Revenue', ascending=False).head(5)
 print("\nTop 5 Products by Revenue:")
+<<<<<<< HEAD
 print(top_products)
+=======
+print(top_products)
+>>>>>>> 003d770 (Day 10: Added pandas script to replicate Project 1 KPIs)
+>>>>>>> 3ee80a8 (Day 10: Final commit consolidating pandas KPI script)
