@@ -1,0 +1,5 @@
+Step,Rows_Before,Rows_After,Rows_Removed,Description
+Missing Customer ID,1067371,824364,243007,Removed rows with missing Customer ID
+Cancellations,824364,805620,18744,Removed cancelled orders (Invoice starts with 'C')
+Invalid Quantity/Price,805620,805549,71,Removed Quantity <= 0 or Price <= 0
+Extreme Outliers,805549,804783,766,Removed extreme Quantity outliers (> 576.0)
