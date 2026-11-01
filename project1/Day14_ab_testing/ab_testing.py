@@ -1,66 +1,29 @@
 import pandas as pd
-import numpy as np
 from scipy.stats import chi2_contingency
 
-print("--- STARTING DAY 14: A/B TESTING & STATISTICAL SIGNIFICANCE ---")
+# Sample A/B Testing Data (e.g., Checkout Page Redesign)
+# Variant A (Control): 10,000 visitors, 1,200 conversions
+# Variant B (Treatment): 10,200 visitors, 1,350 conversions
 
-# 1. Simulate or set up A/B Test Dataset (e.g., Conversion rates for two web/checkout designs)
-# Group A: Control, Group B: Treatment/New Design
-np.random.seed(42)
+data = [
+    [1200, 10000 - 1200],  # Variant A: [Conversions, Non-Conversions]
+    [1350, 10200 - 1350]   # Variant B: [Conversions, Non-Conversions]
+]
 
-n_control = 5000
-n_treatment = 5000
+# Perform Chi-Square Test of Independence
+chi2, p_value, dof, ex = chi2_contingency(data)
 
-# Assume Control conversion rate ~ 10%, Treatment conversion rate ~ 12%
-control_converted = np.random.binomial(1, 0.10, n_control)
-treatment_converted = np.random.binomial(1, 0.12, n_treatment)
+conv_rate_a = 1200 / 10000
+conv_rate_b = 1350 / 10200
+lift = (conv_rate_b - conv_rate_a) / conv_rate_a * 100
 
-# Build a summary DataFrame / Contingency Table
-control_success = control_converted.sum()
-control_fail = n_control - control_success
+print(f"Variant A Conversion Rate: {conv_rate_a:.2%}")
+print(f"Variant B Conversion Rate: {conv_rate_b:.2%}")
+print(f"Observed Lift: {lift:.2f}%")
+print(f"Chi2 Statistic: {chi2:.4f}")
+print(f"P-value: {p_value:.5f}")
 
-treatment_success = treatment_converted.sum()
-treatment_fail = n_treatment - treatment_success
-
-contingency_table = np.array([
-    [control_success, control_fail],
-    [treatment_success, treatment_fail]
-])
-
-print("\nContingency Table (Converted vs Not Converted):")
-print(f"Control   - Converted: {control_success}, Not Converted: {control_fail}")
-print(f"Treatment - Converted: {treatment_success}, Not Converted: {treatment_fail}")
-
-# 2. Perform Chi-Square Test for Independence
-chi2, p_val, dof, ex = chi2_contingency(contingency_table)
-
-print(f"\nChi-Square Statistic: {chi2:.4f}")
-print(f"P-value: {p_val:.4f}")
-
-# 3. Decision making
-alpha = 0.05
-print(f"\nSignificance Threshold (alpha): {alpha}")
-if p_val < alpha:
-    print("Result: Statistically significant difference between Control and Treatment! Reject the null hypothesis.")
+if p_value < 0.05:
+    print("Result: Statistically significant difference! Reject the null hypothesis.")
 else:
-    print("Result: No statistically significant difference. Fail to reject the null hypothesis.")
-
-# 4. Save results to a report note
-report_content = f"""# Day 14: A/B Testing & Chi-Square Analysis Report
-
-## Summary Statistics
-- **Control Group Size:** {n_control} | **Conversions:** {control_success} ({control_success/n_control*100:.2f}%)
-- **Treatment Group Size:** {n_treatment} | **Conversions:** {treatment_success} ({treatment_success/n_treatment*100:.2f}%)
-
-## Statistical Test Results
-- **Test Used:** Chi-Square Test of Independence (`scipy.stats.chi2_contingency`)
-- **Chi2 Statistic:** {chi2:.4f}
-- **P-value:** {p_val:.4f}
-- **Conclusion:** {"Statistically significant" if p_val < alpha else "Not statistically significant"} (p {"<" if p_val < alpha else ">="} {alpha})
-"""
-
-with open('ab_test_report.md', 'w') as f:
-    f.write(report_content)
-
-print("\nSaved: ab_test_report.md")
-print("--- DAY 14 A/B TESTING COMPLETE ---")
+    print("Result: No statistically significant difference. Fail to reject null hypothesis.")
